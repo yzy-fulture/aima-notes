@@ -149,3 +149,17 @@
 
 5. 当任务是序贯且连续发生的，结果可能会发生改变；当任务是静态且离散时，结果不会发生改变
 
+
+# Exercise 13
+> Consider a modified version of the vacuum environment in Exercise [2.10](https://aimacode.github.io/aima-exercises/agents-exercises/ex_10), in which the agent is penalized one point for each movement.
+> 
+> 1. Can a simple reflex agent be perfectly rational for this environment? Explain
+> 2. What about a reflex agent with state? Design such an agent
+> 3. How do your answers to 1 and 2 change if the agent’s percepts give it the clean/dirty status of every square in the environment?
+
+
+> 考虑练习2.10（一个恒温控制器。如果温度>3度，关闭火炉；<3度，打开火炉）中真空环境的一个修改版本，在该版本中，每行动一次，智能体将被罚一分。
+> 
+> 1. 对于这种环境，一个简单反射型智能体是否完全合理？请做出解释
+> 2. 那么带有状态的反射型智能体呢？请设计一个这样的智能体
+> 3. 如果智能体的感知为环境中每个广场的清洁/肮脏状态，您对1和2的回答会如何变化
