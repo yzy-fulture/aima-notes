@@ -163,3 +163,11 @@
 > 1. 对于这种环境，一个简单反射型智能体是否完全合理？请做出解释
 > 2. 那么带有状态的反射型智能体呢？请设计一个这样的智能体
 > 3. 如果智能体的感知为环境中每个广场的清洁/肮脏状态，您对1和2的回答会如何变化
+
+
+
+# Exercise 15
+> Repeat Exercise [2.13](https://aimacode.github.io/aima-exercises/agents-exercises/ex_13) for the case in which the location sensor is replaced with a “bump” sensor that detects the agent’s attempts to move into an obstacle or to cross the boundaries of the environment. Suppose the bump sensor stops working; how should the agent behave?
+
+
+> 对于位置传感器被替换为”碰撞“传感器的情况，该传感器可以检测到智能体进入障碍物或者越过环境边界的尝试。重复练习2.13。假设碰撞传感器停止工作，智能体该如何表现？
