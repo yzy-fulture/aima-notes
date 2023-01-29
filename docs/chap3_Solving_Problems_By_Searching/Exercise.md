@@ -20,4 +20,4 @@
 >使用直线距离启发式函数，追踪应用于从Lugoj到Bucharest的问题的A * 搜索操作。也就是说，显示算法将考虑的节点序列以及每个节点的f、g和h得分（在第三版习题中为A * 搜索）
 
 >答案（等号左边为f， 右边第一个为g，第二个为h）：
->![image-20230128164913876](C:\Users\zhaoyi\AppData\Roaming\Typora\typora-user-images\image-20230128164913876.png)
+>答案参考hw02_s.pdf (ntu.edu.tw)
