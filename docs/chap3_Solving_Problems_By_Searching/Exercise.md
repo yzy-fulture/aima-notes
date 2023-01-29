@@ -116,4 +116,28 @@
 >3. 曼哈顿距离，即$|(n - i + 1) - x_i| + |n - y_i|$,这对一辆车来说是正确的
 >4. 只有第三个是可以接受的。这个解释并不简单，因为它需要两个观察结果。首先，设给定解中的W是所有车辆在其关节轨迹上移动的总距离;也就是说，对于每辆车，将所采取的所有步骤的长度相加。我们有$W \geq \sum^{ }_{h_i }{h_i} \geq n * min{h_1, ... h_n}$.其次，我们每一步可以完成的总量≤n。(注意，对于每一辆跳跃2的车，另一辆车必须保持不变(移动0)，因此每一步的总功以n为界。)因此，完成所有工作至少需要n·min{h1，…，hn}/n = min{h1，…, hn}步骤。
 
+# Exercise 34
+
+>原题目：
+>Consider the problem of moving k knights from k starting squares s1,…,sk to k goal squares g1,…,gk on an unbounded chessboard, subject to the rule that no two knights can land on the same square at the same time. Each action consists of moving *up to* k knights simultaneously. We would like to complete the maneuver in the smallest number of actions.
+>1. What is the maximum branching factor in this state space, expressed as a function of k?
+>2. Suppose hi is an admissible heuristic for the problem of moving knight i to goal gi by itself. Which of the following heuristics are admissible for the k-knight problem? Of those, which is the best?
+> - 
+> - 
+> - 
+>3. Repeat (b) for the case where you are allowed to move only one knight at a time.
+
+>题目翻译：
+>考虑在无界棋盘上将k个骑士从k个起始方块s1，…，sk移动到k个目标方块g1，…，gk的问题，前提是两个骑士不能同时降落在同一个方块上。每个动作包括同时移动最多k个骑士。我们希望以最少的动作达到目标。
+>1. 这个状态空间中的最大分支因子是多少，表示为k的函数
+>2. 假设hi是将骑士i单独移动到目标gi的问题的可接受启发式。以下哪种启发式方法可用于k骑士问题？其中，哪一个是最好的？
+> - 
+> - 
+> - 
+>3. 对于一次只能移动一名骑士的情况，重复（b）
+
+>答案：
+>1. 9k。对于k个骑士，除了完全不移动的可能性，我们还有8种移动中的一种;每个动作为每个骑士执行这9个选择中的一个(除非某些选择因落在同一个方格上而发生冲突)，所以有9k个动作。
+>2. 1和2是可以的。如果$h_i$是精确的，那么2对于骑士可以落在同一个方格上的松弛问题是精确的。$h_i$是可容许的，因此不大于确切的值，因此2是可容许的。1不大于2，因此1是可接受的。3不可信。例如，如果每个$g_i$距离$s_i$只有一步，那么(iii)返回k，而最优解的代价是1。2决定了1，所以它必须一样好或者更好。所以2最好
+>3. （未找到相关资料）
 
