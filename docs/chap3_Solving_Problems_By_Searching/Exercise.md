@@ -94,9 +94,9 @@
 >2. Calculate the branching factor as a function of n.
 >3. Suppose that vehicle i is at (xi,yi); write a nontrivial admissible heuristic hi for the number of moves it will require to get to its goal location (n−i+1,n), assuming no other vehicles are on the grid.
 >4. Which of the following heuristics are admissible for the problem of moving all n vehicles to their destinations? Explain.
-> - 1. 
-> - 2.
-> - 3. 
+> - $\sum^{n}_{i=1}{h_i}$
+> - $max(h_1, ... , h_n)$
+> - $min(h_1, ... , h_n)$
 
 
 
@@ -106,9 +106,9 @@
 >2. 计算n作为函数的分支因子
 >3. 假设车辆i位于（xi，yi)同时网格上没有其他车辆，为到达目标位置（n−i+1，n）所需的移动次数编写一个非平凡的可接受启发式hi（i为下标）
 >4. 对于将所有n辆车移至目的地的问题，以下哪种启发式方法是可接受的？解释
-> - 1. 
-> - 2. 
-> - 3. 
+> - $\sum^{n}_{i=1}{h_i}$
+> - $max(h_1, ... , h_n)$
+> - $min(h_1, ... , h_n)$
 
 >答案：
 >1. $n^{2n}$
@@ -122,18 +122,18 @@
 >Consider the problem of moving k knights from k starting squares s1,…,sk to k goal squares g1,…,gk on an unbounded chessboard, subject to the rule that no two knights can land on the same square at the same time. Each action consists of moving *up to* k knights simultaneously. We would like to complete the maneuver in the smallest number of actions.
 >1. What is the maximum branching factor in this state space, expressed as a function of k?
 >2. Suppose hi is an admissible heuristic for the problem of moving knight i to goal gi by itself. Which of the following heuristics are admissible for the k-knight problem? Of those, which is the best?
-> - 
-> - 
-> - 
+> - $min(h_1, ... ,h_k)$
+> - $max(h_1, ... , h_k)$
+> - $\sum^{k}_{i=1}{h_i}$
 >3. Repeat (b) for the case where you are allowed to move only one knight at a time.
 
 >题目翻译：
 >考虑在无界棋盘上将k个骑士从k个起始方块s1，…，sk移动到k个目标方块g1，…，gk的问题，前提是两个骑士不能同时降落在同一个方块上。每个动作包括同时移动最多k个骑士。我们希望以最少的动作达到目标。
 >1. 这个状态空间中的最大分支因子是多少，表示为k的函数
 >2. 假设hi是将骑士i单独移动到目标gi的问题的可接受启发式。以下哪种启发式方法可用于k骑士问题？其中，哪一个是最好的？
-> - 
-> - 
-> - 
+> - $min(h_1, ... ,h_k)$
+> - $max(h_1, ... , h_k)$
+> - $\sum^{k}_{i=1}{h_i}$
 >3. 对于一次只能移动一名骑士的情况，重复（b）
 
 >答案：
