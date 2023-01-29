@@ -17,10 +17,10 @@
 >Trace the operation of A search applied to the problem of getting to Bucharest from Lugoj using the straight-line distance heuristic. That is, show the sequence of nodes that the algorithm will consider and the f, g, and h score for each node.
 
 >题目翻译：
->使用直线距离启发式函数，追踪应用于从Lugoj到Bucharest的问题的A * 搜索操作。也就是说，显示算法将考虑的节点序列以及每个节点的f、g和h得分（在第三版习题中为A * 搜索）
+>使用直线距离启发式函数，追踪应用于从Lugoj到Bucharest的问题的$A^*$搜索操作。也就是说，显示算法将考虑的节点序列以及每个节点的f、g和h得分（在第三版习题中为A * 搜索）
 
 
->答案参考https://www.csie.ntu.edu.tw/~ai2007s/hw/hw02_s.pdf（图片下等号左边为f， 右边第一个为g，第二个为h
+>答案参考https://www.csie.ntu.edu.tw/~ai2007s/hw/hw02_s.pdf （注意：图片下等号左边为f， 右边第一个为g，第二个为h）
 
 
 # Exercise 30
