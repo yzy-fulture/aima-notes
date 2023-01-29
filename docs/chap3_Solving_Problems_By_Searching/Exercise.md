@@ -48,5 +48,72 @@
 >3. $w = 1$得到 $ A^* $ 搜索
 >4. $w = 2$得到 $ f(n) = 2h(n) $ ,是贪心最佳优先搜索
 
+# Exercise 32
+
+>原题目：
+>Consider the unbounded version of the regular 2D grid shown in . The start state is at the origin, (0,0), and the goal state is at (x,y).
+>1. What is the branching factor b in this state space?
+>2. How many distinct states are there at depth k(for k>0)？
+>3. What is the maximum number of nodes expanded by breadth-first tree search?
+>4. What is the maximum number of nodes expanded by breadth-first graph search?
+>5. Is h=|u−x|+|v−y| an admissible heuristic for a state at (u,v)? Explain.
+>6. How many nodes are expanded by $A$ graph search using h?
+>7. Does ℎ remain admissible if some links are removed?
+>8. Does ℎ remain admissible if some links are added between nonadjacent states?
+
+
+
+>题目翻译：
+>考虑所给的常规二维网格的无界版本。开始状态位于原点（0， 0），目标状态位于（x, y）
+>1. 这个状态空间中的分支因子b是什么？
+>2. 在深度k处有多少不同的状态（对于k＞0)
+>3. 广度优先树搜索扩展的最大节点数是多少？
+>4. 广度优先图搜索扩展的最大节点数是多少？
+>5. $h=|u−x|+|v−y|$是（u，v）处状态的可接受启发式吗？请做出解释
+>6. 使用h的$A^*$图搜索可扩展多少个节点(原题目为A搜索，但找的资料上显示为$A^*$)
+>7. ℎ 如果删除了某些链接，是否仍然可以接受
+>8. ℎ 如果在非相邻状态之间添加了一些链接，是否仍然保持允许
+
+
+>答案：
+>1. 分支因子为4（每个位置的邻居数）
+>2. 在深度k处有4k个不同的状态
+>3. 
+>4.
+>5. 可以，这是曼哈顿距离度量方法，并且只能在网格上移动
+>6. - （未找到相关资料）
+>7. 是的;删除链接可能会导致绕路，这需要更多的步骤，所以h是低估的。
+>8. 不是的;非相邻状态的链接可以减少一些实际路径长度，从而导致不在处于低估状态。
+
+
+# Exercise 33
+
+>原题目：
+>n vehicles occupy squares (1,1) through (n,1) (i.e., the bottom row) of an n×n grid. The vehicles must be moved to the top row but in reverse order; so the vehicle ithat starts in (i,1) must end up in (n−i+1,n). On each time step, every one of the n vehicles can move one square up, down, left, or right, or stay put; but if a vehicle stays put, one other adjacent vehicle (but not more than one) can hop over it. Two vehicles cannot occupy the same square.
+>1. Calculate the size of the state space as a function of n.
+>2. Calculate the branching factor as a function of n.
+>3. Suppose that vehicle i is at (xi,yi); write a nontrivial admissible heuristic hi for the number of moves it will require to get to its goal location (n−i+1,n), assuming no other vehicles are on the grid.
+>4. Which of the following heuristics are admissible for the problem of moving all n vehicles to their destinations? Explain.
+> - 1. 
+> - 2.
+> - 3. 
+
+
+
+>题目翻译：
+>n辆车占据n×n网格的正方形（1,1）到（n，1）（即，最下面的一行）。车辆必须移到最上面一排，但顺序相反；因此，在（i，1）开始的车辆必须在（n−i+1，n）结束。在每个时间步长上，n辆车中的每一辆都可以向上、向下、向左或向右移动一个正方形，或保持不变；但如果一辆车停在原地，另一辆相邻的车（但不超过一辆）可以跳过它。两辆车不能占用同一个广场。
+>1. 根据n计算状态空间的大小
+>2. 计算n作为函数的分支因子
+>3. 假设车辆i位于（xi，yi)同时网格上没有其他车辆，为到达目标位置（n−i+1，n）所需的移动次数编写一个非平凡的可接受启发式hi（i为下标）
+>4. 对于将所有n辆车移至目的地的问题，以下哪种启发式方法是可接受的？解释
+> - 1. 
+> - 2. 
+> - 3. 
+
+>答案：
+>1. $n^{2n}$
+>2. $5^n$
+>3. 曼哈顿距离，即$|(n - i + 1) - x_i| + |n - y_i|$,这对一辆车来说是正确的
+>4. 只有第三个是可以接受的。这个解释并不简单，因为它需要两个观察结果。首先，设给定解中的W是所有车辆在其关节轨迹上移动的总距离;也就是说，对于每辆车，将所采取的所有步骤的长度相加。我们有$W \geq \sum^{ }_{h_i }{h_i} \geq n * min{h_1, ... h_n}$.其次，我们每一步可以完成的总量≤n。(注意，对于每一辆跳跃2的车，另一辆车必须保持不变(移动0)，因此每一步的总功以n为界。)因此，完成所有工作至少需要n·min{h1，…，hn}/n = min{h1，…, hn}步骤。
 
 
