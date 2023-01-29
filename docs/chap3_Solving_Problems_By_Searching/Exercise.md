@@ -39,15 +39,11 @@
 >The **heuristic path algorithm** [Pohl:1977](https://aimacode.github.io/aima-exercises/search-exercises/#) is a best-first search in which the evaluation function is f(n)=(2−w)g(n)+wh(n). For what values of w is this complete? For what values is it optimal, assuming that ℎ is admissible? What kind of search does this perform for w=0, w=1, and w=2?
 
 >题目翻译：
->启发式路径算法是最佳的第一搜索算法，其中评估函数为
-$$
-f(n) = (2 - w)g(n) + wh(n)
-$$
-对于w的什么值，这是完全的？假设ℎ 是可接受的，对于哪些值是最优的？对于w=0、w=1和w=2，这将执行何种搜索？
+>启发式路径算法是最佳的第一搜索算法，其中评估函数为$f(n) = (2 - w)g(n) + wh(n)$.对于w的什么值，这是完全的？假设ℎ 是可接受的，对于哪些值是最优的？对于w=0、w=1和w=2，这将执行何种搜索？
 
 
 >答案：
->1. 对于$0<w<2$时，是完全的
+>1. 对于$ 0 < w < 2 $时，是完全的
 >2. $w = 0$得到$f(n) = 2g(n)$，行为完全类似于均匀代价搜索
 >3. $w = 1$得到$A^*$搜索
 >4. $w = 2$得到$f(n) = 2h(n)$,是贪心最佳优先搜索
